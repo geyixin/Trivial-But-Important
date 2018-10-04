@@ -1,2 +1,2 @@
 # Trivial-But-Important
-小而重要
+计算机网络各种小的知识点。
