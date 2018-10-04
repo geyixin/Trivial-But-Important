@@ -1,6 +1,4 @@
-# HTTP 基本原理
-
-## URI 和 URL
+#  URI 和 URL
 
 > URI：Uniform Resource Identifier，统一资源标志符。
 >
