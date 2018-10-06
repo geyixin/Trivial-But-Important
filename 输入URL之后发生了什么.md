@@ -39,4 +39,16 @@
 > 1.事实上，在进入服务器之前，可能还会先经过负责负载均衡的机器（将请求合理地分配到多个服务器上），比如LVS，反向代理等。在经过了负载均衡后，请求真正地到了服务器的Web Server（比如 Apache，Node.JS等）。请求从链路层到应用层，此时，服务器才算真正接收到了客户端发来的HTTP请求。
 >
 > 2.GET和POST的区别：GET用于获取资源，POST用于修改资源（本质区别）；GET请求的数据在URL里，也就是请求行中，POST请求的数据在报文主体中；GET请求的数据明文出现，不安全；GET请求的数据会受URL长度的限制（不是HTTP对其的限制，多是浏览器的限制），POST的数据理论上不受限制，但Web Server会对提交的数据大小进行限制；GET是安全且[幂等](https://baike.baidu.com/item/%E5%B9%82%E7%AD%89/8600688?fr=aladdin)（安全：不会修改资源，幂等：多次输入同一URL，得到的结果都是一样的），POST既不安全，也不幂等。
+>
+> 补充：
+>
+> [tcp三次握手](https://github.com/geyixin/Trivial-But-Important/blob/master/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.md)
+>
+> [四次挥手](https://github.com/geyixin/Trivial-But-Important/blob/master/tcp%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.md)
+>
+> 为何建立连接是三次，而释放连接是4次？
+>
+> > 连接释放需要A和B都完成释放，A告诉B它要释放连接，A自己不再发数据了，需要一应一答，通用的B告诉A要释放连接，B也准备不发数据了，也是一应一答，所以是四次。
+> >
+> > 而建立连接之前，服务端一直处于LISTEN状态，收到建立连接请求的SYN报文后，把ACK和SYN放在一个报文里发送给客户端，收到这些报文段后，A只需再确认即可。
 
