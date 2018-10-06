@@ -21,3 +21,4 @@
 >
 >2.防止已失效的连接请求报文段出现在在本连接中。（2MSL时间足以使本次连接内产生的报文段都消失）
 
+![四次挥手](https://github.com/geyixin/Trivial-But-Important/blob/master/Image/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg)
